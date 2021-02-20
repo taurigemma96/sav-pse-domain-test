@@ -36,8 +36,10 @@ def getDomainNameExpirationDate(url, time):
                     date = [int(i) for i in data[0].split('-')]
                     time = [int(j) for j in data[1].split(':')]
                     expiration_date = datetime.datetime(date[0], date[1], date[2], time[0], time[1], time[2])
+                    server_socket.close()
                     return expiration_date
             break
+    server_socket.close()
     return expiration_date
 
 

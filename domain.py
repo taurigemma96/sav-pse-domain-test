@@ -69,7 +69,7 @@ def main():
     #if everything is in order, output the expiration_date to the terminal
     if(current_time != expiration_date):
         print("Registry Expiry Date for " + url + ":", expiration_date)
-    #if expiration_date and current_time are the same, then something went wrong with the response from the who-is server such as the expiration date not being present in the data data received
+    #if expiration_date and current_time are the same, then something went wrong with the response from the who-is server such as the expiration date not being present in the data received
     else:
         print("Something went wrong, please try again.")
         main()
